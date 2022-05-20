@@ -36,7 +36,7 @@
 		<img src="/helloweb/assets/images/simpsons.jpg" style="width:120px"/>
 		<img src="assets/images/simpsons.jpg" style="width:120px"/>
 		<br/>
-		<a href="/helloweb/hello">hello로 가기</a>
+		<a href="/helloweb/hello?name=ㅎㅎㅎ">hello로 가기</a>
 		<br/>
 		<a href="form.jsp">폼으로 가기</a>
 
