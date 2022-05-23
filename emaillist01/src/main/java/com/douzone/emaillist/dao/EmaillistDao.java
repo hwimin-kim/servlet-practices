@@ -26,7 +26,7 @@ public class EmaillistDao {
 			connecion = getConnection();
 			
 			// 3. SQL 준비
-			String sql = "select no, first_name, last_name, email from emaillist";
+			String sql = "select no, first_name, last_name, email from emaillist order by no desc";
 			pstmt = connecion.prepareStatement(sql);
 			
 			// 4. Parameter Mapping
