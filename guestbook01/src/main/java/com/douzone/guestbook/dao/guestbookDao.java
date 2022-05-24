@@ -104,7 +104,7 @@ public class guestbookDao {
 			connecion = getConnection();
 			
 			// 3. SQL 준비
-			String sql = "select no, name, password, message, reg_date from guestbook order by reg_date desc";
+			String sql = "select no, name, password, message, date_format(reg_date, '%Y/%m/%d %H:%i:%s') as reg_date from guestbook order by reg_date desc";
 			pstmt = connecion.prepareStatement(sql);
 			
 			// 4. Parameter Mapping
@@ -118,14 +118,14 @@ public class guestbookDao {
 				String name = rs.getString(2);
 				String password = rs.getString(3);
 				String message = rs.getString(4);	
-				Date now = rs.getDate(5);
+				String regDate = rs.getString(5);
 				
 				guestbookVo vo = new guestbookVo();
 				vo.setNo(no);
 				vo.setName(name);
 				vo.setPassword(password);
 				vo.setMessage(message);
-				vo.setRegDate(now);
+				vo.setRegDate(regDate);
 				
 				result.add(vo);
 			}

@@ -7,7 +7,7 @@ public class guestbookVo {
 	private String name;
 	private String password;
 	private String message;
-	private Date regDate;
+	private String  regDate;
 	
 	public Long getNo() {
 		return no;
@@ -33,10 +33,10 @@ public class guestbookVo {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	public Date getRegDate() {
+	public String  getRegDate() {
 		return regDate;
 	}
-	public void setRegDate(Date now2) {
+	public void setRegDate(String  now2) {
 		this.regDate = now2;
 	}
 	@Override
