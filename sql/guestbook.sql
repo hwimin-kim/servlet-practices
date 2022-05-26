@@ -8,3 +8,5 @@ select no, name, password, message, date_format(reg_date, '%Y년 %m월 %d일 %h�
 -- insert()
 insert into guestbook values(null, '이름', '비번', '내용', sysdate());
 -- delete()
+delete from guestbook;
+alter table guestbook auto_increment 1;
