@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.douzone.guestbook.vo.guestbookVo;
+import com.douzone.guestbook.vo.GuestbookVo;
 
 public class guestbookDao {
 	private static final String ID = "webdb";
@@ -46,8 +46,8 @@ public class guestbookDao {
 		return result;
 	}
 	
-	public List<guestbookVo> findByPassword(Long no) {
-		List<guestbookVo> result = new ArrayList<>();
+	public List<GuestbookVo> findByPassword(Long no) {
+		List<GuestbookVo> result = new ArrayList<>();
 		Connection connecion = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -70,7 +70,7 @@ public class guestbookDao {
 				String password = rs.getString(1);
 			
 				
-				guestbookVo vo = new guestbookVo();
+				GuestbookVo vo = new GuestbookVo();
 				vo.setPassword(password);
 			
 				
@@ -94,8 +94,8 @@ public class guestbookDao {
 		return result;
 	}
 	
-	public List<guestbookVo> findAll() {
-		List<guestbookVo> result = new ArrayList<>();
+	public List<GuestbookVo> findAll() {
+		List<GuestbookVo> result = new ArrayList<>();
 		Connection connecion = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -120,7 +120,7 @@ public class guestbookDao {
 				String message = rs.getString(4);	
 				String regDate = rs.getString(5);
 				
-				guestbookVo vo = new guestbookVo();
+				GuestbookVo vo = new GuestbookVo();
 				vo.setNo(no);
 				vo.setName(name);
 				vo.setPassword(password);
@@ -147,7 +147,7 @@ public class guestbookDao {
 		return result;
 	}
 	
-	public boolean insert(guestbookVo vo) {
+	public boolean insert(GuestbookVo vo) {
 		boolean result = false;
 		Connection connecion = null;
 		PreparedStatement pstmt = null;

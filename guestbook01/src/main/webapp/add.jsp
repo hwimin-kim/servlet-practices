@@ -4,19 +4,19 @@
     pageEncoding="UTF-8"%>
     
 <%
-	request.setCharacterEncoding("utf-8");
-	String name = request.getParameter("name");
-	String password = request.getParameter("password");
-	String message = request.getParameter("message");
-	guestbookVo vo = new guestbookVo();
-	vo.setName(name);
-	vo.setPassword(password);
-	vo.setMessage(message);
-	
-	new guestbookDao().insert(vo);
-	
-	response.sendRedirect("/guestbook01");
-%>
+    request.setCharacterEncoding("utf-8");
+    	String name = request.getParameter("name");
+    	String password = request.getParameter("password");
+    	String message = request.getParameter("message");
+    	guestbookVo vo = new guestbookVo();
+    	vo.setName(name);
+    	vo.setPassword(password);
+    	vo.setMessage(message);
+    	
+    	new guestbookDao().insert(vo);
+    	
+    	response.sendRedirect("/guestbook01");
+    %>
     
 <!DOCTYPE html>
 <html>

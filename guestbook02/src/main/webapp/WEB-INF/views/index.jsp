@@ -1,11 +1,11 @@
-<%@page import="com.douzone.guestbook.vo.guestbookVo"%>
+<%@page import="com.douzone.guestbook.vo.GuestbookVo"%>
 <%@page import="java.util.List"%>
 <%@page import="com.douzone.guestbook.dao.guestbookDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
 request.setCharacterEncoding("utf-8");
-List<guestbookVo> list = (List<guestbookVo>)request.getAttribute("list");
+List<GuestbookVo> list = (List<GuestbookVo>)request.getAttribute("list");
 int size = list.size();
 %>
 
@@ -17,7 +17,7 @@ int size = list.size();
 <body>
 
 
-	<form action="<%=request.getContextPath() %>/gb?a=add" method="post">
+	<form action="<%=request.getContextPath()%>/gb?a=add" method="post">
 	<table border=1 width=500>
 		<tr>
 			<td>이름</td><td><input type="text" name="name"></td>
@@ -33,7 +33,9 @@ int size = list.size();
 	</form>
 	<br>
 	
-	<%for(guestbookVo vo : list) { %>
+	<%
+		for(GuestbookVo vo : list) {
+		%>
 	<table width=510 border=1>
 		<tr>
 			<td><%= size %></td>
